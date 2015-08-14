@@ -12,9 +12,11 @@
             color: #656565;
             height: 40px;
             line-height: 40px;
+            cursor: pointer;
         }
         .toggleBox>div.active{
             background-color: #eee;
+            border-bottom: none;
         }
         .contentBox>div{
             height:200px;
@@ -32,9 +34,9 @@
         <div class="row">
             <div class="col-md-6" ms-controller="tebBox">
                 <div class="row toggleBox">
-                    <div class="col-md-4" ms-click="showTab(0)">选项卡1</div>
-                    <div class="col-md-4" ms-click="showTab(1)">选项卡2</div>
-                    <div class="col-md-4" ms-click="showTab(2)">选项卡3</div>
+                    <div class="col-md-4" ms-click="showTab(0)" ms-class="active:vFlag===0">选项卡1</div>
+                    <div class="col-md-4" ms-click="showTab(1)" ms-class="active:vFlag===1">选项卡2</div>
+                    <div class="col-md-4" ms-click="showTab(2)" ms-class="active:vFlag===2">选项卡3</div>
                 </div>
                 <div class="row contentBox">
                     <div class="col-md-12" ms-visible="vFlag===0">我是选项卡1的内容</div>
