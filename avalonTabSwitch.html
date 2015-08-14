@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-hans">
+<head>
+    <meta charset="UTF-8">
+    <title>Avalon 实现选项卡</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/avalon.modern.js"></script>
+    <script src="js/avalonTabSwitch.js"></script>
+    <style>
+        .toggleBox>div{
+            border: 1px solid #323232;
+            color: #656565;
+            height: 40px;
+            line-height: 40px;
+        }
+        .toggleBox>div.active{
+            background-color: #eee;
+        }
+        .contentBox>div{
+            height:200px;
+            background: #eee;
+            padding:10px;
+            border-left: 1px solid #323232;
+            border-right: 1px solid #323232;
+            border-bottom: 1px solid #323232;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 class="page-header">Avalon 实现选项卡</h2>
+        <div class="row">
+            <div class="col-md-6" ms-controller="tebBox">
+                <div class="row toggleBox">
+                    <div class="col-md-4" ms-click="showTab(0)">选项卡1</div>
+                    <div class="col-md-4" ms-click="showTab(1)">选项卡2</div>
+                    <div class="col-md-4" ms-click="showTab(2)">选项卡3</div>
+                </div>
+                <div class="row contentBox">
+                    <div class="col-md-12" ms-visible="vFlag===0">我是选项卡1的内容</div>
+                    <div class="col-md-12" ms-visible="vFlag===1">我是选项卡2的内容</div>
+                    <div class="col-md-12" ms-visible="vFlag===2">我是选项卡3的内容</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
